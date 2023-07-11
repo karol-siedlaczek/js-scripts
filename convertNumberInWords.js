@@ -5,7 +5,7 @@ function getNumberInWords(number){
   var hundreds = ['', ' sto', ' dwieście', ' trzysta', ' czterysta', ' pięćset', ' sześćset', ' siedemset', ' osiemset', ' dziewięćset']
   var groups = [ ['', '', ''], [' tysiąc', ' tysiące', ' tysięcy'], [" milion" ," miliony" ," milionów"], [" miliard"," miliardy"," miliardów"],
                  [" bilion" ," biliony" ," bilionów"], [" biliard"," biliardy"," biliardów"], [" trylion"," tryliony"," trylionów"]];
-  Logger.log(number)
+  console.log(number)
   if (typeof number == 'number'){
     const logMessage = 'Number ' + number + ' converted in words: ';
     var result = '';
@@ -43,11 +43,11 @@ function getNumberInWords(number){
     result = result.substring(1)
     if (result.startsWith('jeden tysiąc'));
       result = result.replace('jeden tysiąc', 'tysiąc');
-    Logger.log(logMessage +  char + result);
+    console.log(logMessage +  char + result);
     return char + result;
   }
   else {
-    Logger.log('"' + number + '" is not a number')
+    console.log('"' + number + '" is not a number')
     return null
   }
 }
